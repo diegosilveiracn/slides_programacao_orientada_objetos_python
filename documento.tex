@@ -156,15 +156,7 @@ diego.nascimento@ifrn.edu.br
 			\item Estado -- representa as propriedades (nome, peso, altura, cor, etc.); e
 			\item Comportamento -- representa ações (andar, falar, calcular, etc.).
 		\end{itemize}
-	\end{itemize} \vfill
-	
-	\begin{exampleblock}{Ilustações}
-		\begin{center}
-			\includegraphics[scale=0.3]{./imagens/carro}~~~
-			\includegraphics[scale=0.3]{./imagens/celular}~~~
-			\includegraphics[scale=0.3]{./imagens/pessoa}
-		\end{center}
-	\end{exampleblock}
+	\end{itemize}
 \end{frame}
 
 
@@ -198,28 +190,15 @@ diego.nascimento@ifrn.edu.br
 \section{Abstração}
 
 \begin{frame}
-	\frametitle{Classes}
+	\frametitle{Classe}
 	
 	\begin{itemize}
 	  \item A estrutura fundamental para definir novos objetos é a classe; e
 	  \item Uma classe é definida em código-fonte.
 	\end{itemize} \vfill
 	
-	\begin{exampleblock}{Ilustração}
-		\begin{center}
-			\includegraphics[scale=0.3]{./imagens/classe-objeto}
-		\end{center}		
-	\end{exampleblock}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Classe em Python}
-		
 	\begin{block}{Estrutura}
-		\textbf{class} nome\_da\_classe:\\
-		~~~~atributos\\
-		~~~~construtor\\
-		~~~~métodos
+	\textbf{class} nome\_da\_classe:
 	\end{block}
 \end{frame}
 
@@ -229,8 +208,7 @@ diego.nascimento@ifrn.edu.br
 	\begin{exampleblock}{Exemplo}
 		\begin{lstlisting}
 class Conta:		
-    numero = None
-    saldo = None
+    pass
 		\end{lstlisting}
 	\end{exampleblock}
 \end{frame}
@@ -262,11 +240,8 @@ class Conta:
 	\begin{exampleblock}{Exemplo}
 		\begin{lstlisting}
 conta = Conta()
-conta.numero = 1
-conta.saldo = 10
-print(conta.numero)
-print(conta.saldo)
-        \end{lstlisting}
+type(conta)        
+\end{lstlisting}
 	\end{exampleblock}
 \end{frame}
 
@@ -367,13 +342,7 @@ print(conta2.consultar_saldo())
 	  \item Evita que dados específicos de uma aplicação possa ser acessado
 	  diretamente; e
 	  \item Protege os atributos ou métodos de uma classe.
-	\end{itemize} \vfill
-	
-	\begin{exampleblock}{Ilustração}
-		\begin{center}
-			\includegraphics[scale=0.3]{./imagens/encapsulamento}
-		\end{center}		
-	\end{exampleblock}
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
