@@ -352,11 +352,10 @@ print(conta2.consultar_saldo())
 	  \item Em Python, existem dois tipos de modificadores de acesso para atributos
 	  e métodos:
 	  \begin{itemize}
-	    \item Público; ou
-	    \item Privado.
+	    \item Público -- Atributos e métodos podem ser acessados de qualquer lugar; 
+	    \item Protegido -- Usar um único sublinhado (\_numero) indica que o membro deve ser acessado apenas internamente ou por subclasses. É uma convenção de aviso, não um bloqueio técnico; ou
+	    \item Privado -- Usar dois sublinhados (\_\_saldo) aciona o name mangling (alteração de nome), tornando o atributo difícil de acessar fora da classe.
 	  \end{itemize}
-	  \item Atributos ou métodos iniciados por dois sublinhados são privados e
-	  todas as outras formas são públicas.
 	\end{itemize}
 \end{frame}
 
@@ -367,7 +366,7 @@ print(conta2.consultar_saldo())
 		\begin{lstlisting}
 class Conta:
     def __init__(self, numero):
-        self.__numero = numero
+        self._numero = numero
         self.__saldo = 0.0
 
     def consultar_saldo(self):
@@ -385,9 +384,7 @@ class Conta:
 
 conta = Conta(1)
 conta.creditar(100)
-conta.__saldo = 200.0 #Não é possível alterar o saldo da conta
-
-print(conta.consultar_saldo())
+print(conta.__saldo) 
         \end{lstlisting}
 	\end{exampleblock}
 \end{frame}
